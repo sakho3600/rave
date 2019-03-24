@@ -1,4 +1,4 @@
-# rave
+# Rave
 
 A new Flutter package project.
 
