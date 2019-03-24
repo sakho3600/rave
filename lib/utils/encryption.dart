@@ -1,9 +1,10 @@
 import 'dart:convert'; // to base64
-import 'package:tripledes/tripledes.dart'; // for 3DES is for encryption
+//import 'package:tripledes/tripledes.dart'; // for 3DES is for encryption
 import 'package:crypto/crypto.dart'; // for hashfunctions
 import 'chaSel.dart'; // utitliy with character selection
 
-getkey(secretKey){
+// function for generation encryption key
+getkey(String secretKey){
 
   // hash secret key
   var hashedSecKey = md5.convert(
@@ -11,13 +12,13 @@ getkey(secretKey){
     );
   
   // select last 12 characters of hashedsecretKey
-  var hashedSecKeyLast12 = lastCha(hashedSecKey);
+  var hashedSecKeyLast12 = lastCha(hashedSecKey.toString());
 
    // select first 12 characters of hashedsecretKey
   var adjustedSecKey = secretKey.replaceAll('FLWSECK-', '');
   var adjustedSecKeyFirst12 = firstCha(adjustedSecKey);
 
   return adjustedSecKeyFirst12 + hashedSecKeyLast12;
-
-
 }
+
+encrypt(){}
