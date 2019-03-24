@@ -1,0 +1,11 @@
+.DS_Store
+.dart_tool/
+.vscode
+
+.packages
+.pub/
+
+build/
+ios/.generated/
+ios/Flutter/Generated.xcconfig
+ios/Runner/GeneratedPluginRegistrant.*
