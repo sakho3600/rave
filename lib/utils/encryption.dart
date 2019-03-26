@@ -1,5 +1,5 @@
 import 'dart:convert'; // to base64
-//import 'package:tripledes/tripledes.dart'; // for 3DES is for encryption
+import 'package:tripledes/tripledes.dart'; // for 3DES is for encryption
 import 'package:crypto/crypto.dart'; // for hashfunctions
 import 'chaSel.dart'; // utitliy with character selection
 
@@ -21,4 +21,12 @@ getkey(String secretKey){
   return adjustedSecKeyFirst12 + hashedSecKeyLast12;
 }
 
-encrypt(){}
+// generate key from getKey() & plaintext encrypt
+String encrypt(String key, String plainText){
+  
+  // create blockcipher with 3DES
+  var blockCipher = new BlockCipher(new TripleDESEngine(), key);
+  var encryptedText = blockCipher.encodeB64(plainText);
+
+  return encryptedText;
+}
