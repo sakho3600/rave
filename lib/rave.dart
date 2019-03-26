@@ -4,8 +4,11 @@ import 'utils/encryption.dart';
 
 main() {
   // testing getkey function
+  var plainText = 'rabbit';
   var disp = getkey('FLWSECK-6b32914d4d60c10d0ef72bdad734134a-X');
-  print('$disp');
+  var disp2 = encrypt(disp, plainText);
+  print('$disp'); // encryption key
+  print('$disp2'); // encrypted Text
 }
 
 /*
