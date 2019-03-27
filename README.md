@@ -2,7 +2,7 @@
 
 Flutter support for FlutterWave's RAVE API.
 
-## Quick Start
+## Features
 
 ### Mobile Money
 
@@ -19,12 +19,14 @@ Flutter support for FlutterWave's RAVE API.
 > Charge debit/credit cards
 
 - [ ] Vanilla cards
-- [ ] OTP cards
-- [ ] AVS (address verification system)
+- [ ] AVS (address verification system) 
+- [ ] AVS_VBVSECURECODE & 3DSecure Transactions
+- [ ] Nigerian Mastercard/verve card
 
 ### Bank Payments
 
 > Charge US accounts using our ACH account charge flow
 
-- [ ] ACH support with WebView
+- [ ] US ACH support with WebView
+- [ ] Nigerian payments
 
