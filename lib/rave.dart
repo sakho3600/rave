@@ -1,14 +1,11 @@
 library rave;
 
-import 'utils/encryption.dart';
+import 'utils/dataStructures.dart';
 
 main() {
-  // testing getkey function
-  var plainText = 'rabbit';
-  var disp = getkey('FLWSECK-6b32914d4d60c10d0ef72bdad734134a-X');
-  var disp2 = encrypt(disp, plainText);
-  print('$disp'); // encryption key
-  print('$disp2'); // encrypted Text
+ var disp = mmUG("FLWPUBK-4e581ebf8372cd691203b27227e2e3b8-X", "100", "inbox@gmail.com", "0755351743", "Max", "Dakota", "0.0.0.0");
+ print('$disp');
+
 }
 
 /*
