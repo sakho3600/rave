@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 /* 
   *MobileMoney 
 */
@@ -17,8 +18,8 @@ import 'dart:convert';
   mmUG['firstname'] = firstName;
   mmUG['lastname'] = lastName;
   mmUG['IP'] = ip;
-  mmUG['txRef'] = 'MC-' + DateTime.now().microsecondsSinceEpoch.toString();
-  mmUG['orderRef'] = 'MC_' + DateTime.now().microsecondsSinceEpoch.toString();
+  mmUG['txRef'] = 'MC-' + DateTime.now().microsecondsSinceEpoch.toString() + Random(1995).nextInt(1000).toString();
+  mmUG['orderRef'] = 'MC_' + DateTime.now().microsecondsSinceEpoch.toString() + Random(5991).nextInt(1000).toString();
   mmUG['is_mobile_money_ug'] = 1;
   mmUG['redirect_url'] = 'https://rave-webhook.herokuapp.com/receivepayment';
   mmUG['device_fingerprint'] = '69e6b7f0b72037aa8428b70fbe03986c';
