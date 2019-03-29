@@ -22,10 +22,10 @@ getkey(String secretKey){
 }
 
 // generate key from getKey() & plaintext encrypt
-String encrypt(String key, String plainText){
+String encrypt(String encryptionKey, String plainText){
   
   // create blockcipher with 3DES
-  var blockCipher = new BlockCipher(new TripleDESEngine(), key);
+  var blockCipher = new BlockCipher(new TripleDESEngine(), encryptionKey);
   var encryptedText = blockCipher.encodeB64(plainText);
 
   return encryptedText;
