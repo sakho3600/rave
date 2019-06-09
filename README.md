@@ -1,6 +1,6 @@
 # Rave
 
-Flutter support for FlutterWave's RAVE API.
+Flutter support for FlutterWave's [RAVE API](https://rave.flutterwave.com/login).
 
 ## Features
 
