@@ -1,17 +1,32 @@
 library rave;
 
-import 'utils/dataStructures.dart';
+import 'package:rave/utils/dataStructures.dart'; // utilities for datastructures
+import 'package:rave/utils/encryption.dart'; // utilities for encryption
+import 'package:rave/utils/makeRequest.dart'; // utilities for making HTTP requests
 
-main() {
- var disp = mmUG("FLWPUBK-4e581ebf8372cd691203b27227e2e3b8-X", "100", "inbox@gmail.com", "0755351743", "Max", "Dakota", "0.0.0.0");
- print('$disp');
+class Rave {
+  String pubKey;
+  String encryptionKey;
+  String secretKey;
 
+// Charge MMUG Client
+  chargeMMUGClient(amount, email, phoneNumber, firstName, lastName, ip) {
+    var payload =
+        mmUG(pubKey, amount, email, phoneNumber, firstName, lastName, ip);
+    var encryptedData = encrypt(encryptionKey, payload);
+
+    chargeMMClientReq(pubKey, encryptedData);
+  }
+
+// Verify Transaction
+  verifyTXN(txRef) {
+    verifyTXNReq(txRef, secretKey);
+  }
+
+// Pay client via Mobile Money
+  payMMUGClient(network, phoneNumber, amount, narration, currency, name) {
+    payMMClientReq(
+        network, phoneNumber, amount, secretKey, narration, currency, name);
+  }
 }
 
-/*
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
-*/
