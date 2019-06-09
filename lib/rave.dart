@@ -24,7 +24,7 @@ class Rave {
   }
 
 // Pay client via Mobile Money
-  payMMUGClient(network, phoneNumber, amount, narration, currency, name) {
+  payMMClient(network, phoneNumber, amount, narration, currency, name) {
     payMMClientReq(
         network, phoneNumber, amount, secretKey, narration, currency, name);
   }
