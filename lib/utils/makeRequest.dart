@@ -3,14 +3,14 @@ import 'dart:io';
 import 'dart:convert';
 
 var chargeClientURL =
-    "https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/charge";
+    "https://api.ravepay.co/flwv3-pug/getpaidx/api/charge";
 
 var payClientURL = "https://api.ravepay.co/v2/gpx/transfers/create";
 
 var verifyTXNURL = 'https://api.ravepay.co/flwv3-pug/getpaidx/api/v2/verify';
 
 // charge Client via Mobile Money
-chargeMMClient(pubKey, encryptedData) {
+chargeMMClientReq(pubKey, encryptedData) {
   var payload = json.encode({
       "PBFPubKey": pubKey,
       "client": encryptedData,
@@ -27,14 +27,15 @@ chargeMMClient(pubKey, encryptedData) {
 }
 
 // Pay client via Mobile Money
-payMMClient(network, phoneNumber, amount, secretKey, narration, currency) {
+payMMClientReq(network, phoneNumber, amount, secretKey, narration, currency, name) {
   var payload = json.encode({
     "account_bank": network,
     "account_number": phoneNumber,
     "amount": amount,
     "seckey": secretKey,
     "narration": narration,
-    "currency": currency
+    "currency": currency,
+    "beneficiary_name": name
   });
 
   return http
@@ -50,7 +51,7 @@ payMMClient(network, phoneNumber, amount, secretKey, narration, currency) {
 }
 
 // Verify Transaction
-verifyTXN(txRef, secretKey) {
+verifyTXNReq(txRef, secretKey) {
   var payload = json
       .encode({"txref": txRef, "SECKEY": secretKey});
   return http
