@@ -1,7 +1,7 @@
 import 'dart:convert'; // to base64
 import 'package:tripledes/tripledes.dart'; // for 3DES is for encryption
 import 'package:crypto/crypto.dart'; // for hashfunctions
-import 'characterSelection.dart'; // utitliy with character selection
+import 'package:rave/utils/characterSelection.dart'; // utitliy with character selection
 
 // function for generation encryption key
 getkey(String secretKey){
