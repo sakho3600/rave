@@ -1,7 +1,7 @@
 name: rave
 description: Flutter support for Flutter Wave's RAVE API.
 version: 0.0.1
-author: as1ndu
+author: "as1ndu <git@drileba.capital>"
 homepage: https://github.com/as1ndu/rave
 
 environment:

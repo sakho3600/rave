@@ -1,8 +1,8 @@
 library rave;
 
-import 'package:rave/utils/dataStructures.dart'; // utilities for datastructures
+import 'package:rave/utils/data_structures.dart'; // utilities for datastructures
 import 'package:rave/utils/encryption.dart'; // utilities for encryption
-import 'package:rave/utils/makeRequest.dart'; // utilities for making HTTP requests
+import 'package:rave/utils/make_request.dart'; // utilities for making HTTP requests
 
 class Rave {
   String pubKey;
