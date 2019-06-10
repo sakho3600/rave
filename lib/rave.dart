@@ -4,6 +4,7 @@ import 'package:rave/utils/data_structures.dart'; // utilities for datastructure
 import 'package:rave/utils/encryption.dart'; // utilities for encryption
 import 'package:rave/utils/make_request.dart'; // utilities for making HTTP requests
 
+/// Used to create a new instance of Rave
 class Rave {
 
   String pubKey; /// Your public key provided by flutter wave
