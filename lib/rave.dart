@@ -20,7 +20,7 @@ class Rave {
    * 
    * __amount__: is a String specifying the amount of money to collect from a client
    * 
-   * __email__: is a String specifying the amount to collect from a client
+   * __email__: is a String specifying the email address of a client
    * 
    * __phoneNumber__: is a String specifying the mobile money phone number of the client
    * 
