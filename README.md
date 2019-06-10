@@ -4,6 +4,7 @@ Flutter support for FlutterWave's [RAVE API](https://rave.flutterwave.com/login)
 
 ## Documentation
 1. See example code [here](https://github.com/as1ndu/rave/tree/master/example)
+2. For a more comprehensive documentation see [this](https://pub.dev/documentation/rave/latest/rave/Rave-class.html)
 
 ## Features
 
