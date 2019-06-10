@@ -4,17 +4,14 @@ import 'package:crypto/crypto.dart'; // for hashfunctions
 import 'package:rave/utils/character_selection.dart'; // utitliy with character selection
 
 // function for generation encryption key
-getkey(String secretKey){
-
+getkey(String secretKey) {
   // hash secret key
-  var hashedSecKey = md5.convert(
-    utf8.encode(secretKey)
-    );
-  
+  var hashedSecKey = md5.convert(utf8.encode(secretKey));
+
   // select last 12 characters of hashedsecretKey
   var hashedSecKeyLast12 = lastCha(hashedSecKey.toString());
 
-   // select first 12 characters of hashedsecretKey
+  // select first 12 characters of hashedsecretKey
   var adjustedSecKey = secretKey.replaceAll('FLWSECK-', '');
   var adjustedSecKeyFirst12 = firstCha(adjustedSecKey);
 
@@ -22,8 +19,7 @@ getkey(String secretKey){
 }
 
 // generate key from getKey() & plaintext encrypt
-String encrypt(String encryptionKey, String plainText){
-  
+String encrypt(String encryptionKey, String plainText) {
   // create blockcipher with 3DES
   var blockCipher = new BlockCipher(new TripleDESEngine(), encryptionKey);
   var encryptedText = blockCipher.encodeB64(plainText);

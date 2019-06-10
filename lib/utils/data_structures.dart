@@ -58,78 +58,78 @@ mmMPESA(
 // Rwanda
 mmRW(pubKey, amount, email, phoneNumber, firstName, lastName, ip) {
   var mmRW = Map();
-   mmRW['PBFPubKey'] = pubKey;
-   mmRW['currency'] = 'RWF';
-   mmRW['payment_type'] = 'mobilemoneyuganda';
-   mmRW['country'] = 'NG';
-   mmRW['amount'] = amount;
-   mmRW['email'] = email;
-   mmRW['phonenumber'] = phoneNumber;
-   mmRW['network'] = 'UGX';
-   mmRW['firstname'] = firstName;
-   mmRW['lastname'] = lastName;
-   mmRW['IP'] = ip;
-   mmRW['txRef'] = 'MC-' +
+  mmRW['PBFPubKey'] = pubKey;
+  mmRW['currency'] = 'RWF';
+  mmRW['payment_type'] = 'mobilemoneyuganda';
+  mmRW['country'] = 'NG';
+  mmRW['amount'] = amount;
+  mmRW['email'] = email;
+  mmRW['phonenumber'] = phoneNumber;
+  mmRW['network'] = 'UGX';
+  mmRW['firstname'] = firstName;
+  mmRW['lastname'] = lastName;
+  mmRW['IP'] = ip;
+  mmRW['txRef'] = 'MC-' +
       DateTime.now().microsecondsSinceEpoch.toString() +
       Random(1995).nextInt(1000).toString();
-   mmRW['orderRef'] = 'MC_' +
+  mmRW['orderRef'] = 'MC_' +
       DateTime.now().microsecondsSinceEpoch.toString() +
       Random(5991).nextInt(1000).toString();
-   mmRW['is_mobile_money_ug'] = 1;
-   mmRW['redirect_url'] = 'https://rave-webhook.herokuapp.com/receivepayment';
-   mmRW['device_fingerprint'] = '69e6b7f0b72037aa8428b70fbe03986c';
+  mmRW['is_mobile_money_ug'] = 1;
+  mmRW['redirect_url'] = 'https://rave-webhook.herokuapp.com/receivepayment';
+  mmRW['device_fingerprint'] = '69e6b7f0b72037aa8428b70fbe03986c';
   return json.encode(mmRW);
 }
 
 // Zambia
 mmZM(pubKey, amount, email, phoneNumber, firstName, lastName, ip) {
   var mmZM = Map();
-   mmZM['PBFPubKey'] = pubKey;
-   mmZM['currency'] = 'ZMW';
-   mmZM['payment_type'] = 'mobilemoneyzambia';
-   mmZM['country'] = 'NG';
-   mmZM['amount'] = amount;
-   mmZM['email'] = email;
-   mmZM['phonenumber'] = phoneNumber;
-   mmZM['network'] = 'MTN';
-   mmZM['firstname'] = firstName;
-   mmZM['lastname'] = lastName;
-   mmZM['IP'] = ip;
-   mmZM['txRef'] = 'MC-' +
+  mmZM['PBFPubKey'] = pubKey;
+  mmZM['currency'] = 'ZMW';
+  mmZM['payment_type'] = 'mobilemoneyzambia';
+  mmZM['country'] = 'NG';
+  mmZM['amount'] = amount;
+  mmZM['email'] = email;
+  mmZM['phonenumber'] = phoneNumber;
+  mmZM['network'] = 'MTN';
+  mmZM['firstname'] = firstName;
+  mmZM['lastname'] = lastName;
+  mmZM['IP'] = ip;
+  mmZM['txRef'] = 'MC-' +
       DateTime.now().microsecondsSinceEpoch.toString() +
       Random(1995).nextInt(1000).toString();
-   mmZM['orderRef'] = 'MC_' +
+  mmZM['orderRef'] = 'MC_' +
       DateTime.now().microsecondsSinceEpoch.toString() +
       Random(5991).nextInt(1000).toString();
-   mmZM['is_mobile_money_ug'] = 1;
-   mmZM['redirect_url'] = 'https://rave-webhook.herokuapp.com/receivepayment';
-   mmZM['device_fingerprint'] = '69e6b7f0b72037aa8428b70fbe03986c';
+  mmZM['is_mobile_money_ug'] = 1;
+  mmZM['redirect_url'] = 'https://rave-webhook.herokuapp.com/receivepayment';
+  mmZM['device_fingerprint'] = '69e6b7f0b72037aa8428b70fbe03986c';
   return json.encode(mmZM);
 }
 
 // Ghana
 mmGH(pubKey, amount, email, phoneNumber, firstName, lastName, ip) {
   var mmRW = Map();
-   mmRW['PBFPubKey'] = pubKey;
-   mmRW['currency'] = 'GHS';
-   mmRW['payment_type'] = 'mobilemoneygh';
-   mmRW['country'] = 'GHS';
-   mmRW['amount'] = amount;
-   mmRW['email'] = email;
-   mmRW['phonenumber'] = phoneNumber;
-   mmRW['network'] = 'MTN';
-   mmRW['firstname'] = firstName;
-   mmRW['lastname'] = lastName;
-   mmRW['IP'] = ip;
-   mmRW['txRef'] = 'MC-' +
+  mmRW['PBFPubKey'] = pubKey;
+  mmRW['currency'] = 'GHS';
+  mmRW['payment_type'] = 'mobilemoneygh';
+  mmRW['country'] = 'GHS';
+  mmRW['amount'] = amount;
+  mmRW['email'] = email;
+  mmRW['phonenumber'] = phoneNumber;
+  mmRW['network'] = 'MTN';
+  mmRW['firstname'] = firstName;
+  mmRW['lastname'] = lastName;
+  mmRW['IP'] = ip;
+  mmRW['txRef'] = 'MC-' +
       DateTime.now().microsecondsSinceEpoch.toString() +
       Random(1995).nextInt(1000).toString();
-   mmRW['orderRef'] = 'MC_' +
+  mmRW['orderRef'] = 'MC_' +
       DateTime.now().microsecondsSinceEpoch.toString() +
       Random(5991).nextInt(1000).toString();
-   mmRW['is_mobile_money_ug'] = 1;
-   mmRW['redirect_url'] = 'https://rave-webhook.herokuapp.com/receivepayment';
-   mmRW['device_fingerprint'] = '69e6b7f0b72037aa8428b70fbe03986c';
+  mmRW['is_mobile_money_ug'] = 1;
+  mmRW['redirect_url'] = 'https://rave-webhook.herokuapp.com/receivepayment';
+  mmRW['device_fingerprint'] = '69e6b7f0b72037aa8428b70fbe03986c';
   return json.encode(mmRW);
 }
 
