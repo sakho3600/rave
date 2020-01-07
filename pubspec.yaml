@@ -2,7 +2,7 @@ name: rave
 description: Flutter support for Flutter Wave's RAVE API. Currently supports Mobile Money payments but will soon have support for debit & credit cards
 version: 0.0.5
 author: "as1ndu <git@drileba.capital>"
-homepage: https://github.com/as1ndu/rave
+homepage: https://github.com/DrilebaCapital/rave
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
