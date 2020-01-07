@@ -3,7 +3,9 @@
 Flutter support for FlutterWave's [RAVE API](https://rave.flutterwave.com/login).
 
 ## Documentation
-1. See example code [here](https://github.com/as1ndu/rave/tree/master/example)
+1. See example code in 
+    - [Vanilla Dart (for cli tooling)](https://github.com/as1ndu/rave/tree/master/example/vanilla)
+    - [Flutter Dart (for iOS, Android, Desktop & Web)](https://github.com/as1ndu/rave/tree/master/example/flutter)
 2. For a more comprehensive documentation see [this](https://pub.dev/documentation/rave/latest/rave/Rave-class.html)
 
 ## Installation
@@ -16,11 +18,11 @@ See package via [Pub](https://pub.dev/packages/rave)
 
 > Make MobileMoney transactions in  Uganda,  MPESA, Ghana, Zambia, & Rwanda
 
-- [X] [Uganda](#)
-- [X] [MPESA](#)
-- [X] [Ghana](#)
-- [X] [Zambia](#)
-- [X] [Rwanda](#)
+- [X] [Uganda](https://pub.dev/documentation/rave/latest/rave/Rave/chargeMMUGClient.html)
+- [X] [MPESA](https://pub.dev/documentation/rave/latest/rave/Rave/chargeMMMPESAClient.html)
+- [X] [Ghana](https://pub.dev/documentation/rave/latest/rave/Rave/chargeMMGHClient.html)
+- [X] [Zambia](https://pub.dev/documentation/rave/latest/rave/Rave/chargeMMZMClient.html)
+- [X] [Rwanda](https://pub.dev/documentation/rave/latest/rave/Rave/chargeMMRWClient.html)
 
 ### Cards
 
