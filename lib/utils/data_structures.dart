@@ -1,9 +1,7 @@
 import 'dart:convert';
 import 'dart:math';
-/* 
-  *MobileMoney 
-*/
 
+// Mobile Money
 // Uganda
 mmUG(pubKey, amount, email, phoneNumber, firstName, lastName, ip) {
   var mmUG = Map();
@@ -109,33 +107,31 @@ mmZM(pubKey, amount, email, phoneNumber, firstName, lastName, ip) {
 
 // Ghana
 mmGH(pubKey, amount, email, phoneNumber, firstName, lastName, ip) {
-  var mmRW = Map();
-  mmRW['PBFPubKey'] = pubKey;
-  mmRW['currency'] = 'GHS';
-  mmRW['payment_type'] = 'mobilemoneygh';
-  mmRW['country'] = 'GHS';
-  mmRW['amount'] = amount;
-  mmRW['email'] = email;
-  mmRW['phonenumber'] = phoneNumber;
-  mmRW['network'] = 'MTN';
-  mmRW['firstname'] = firstName;
-  mmRW['lastname'] = lastName;
-  mmRW['IP'] = ip;
-  mmRW['txRef'] = 'MC-' +
+  var mmGH = Map();
+  mmGH['PBFPubKey'] = pubKey;
+  mmGH['currency'] = 'GHS';
+  mmGH['payment_type'] = 'mobilemoneygh';
+  mmGH['country'] = 'GHS';
+  mmGH['amount'] = amount;
+  mmGH['email'] = email;
+  mmGH['phonenumber'] = phoneNumber;
+  mmGH['network'] = 'MTN';
+  mmGH['firstname'] = firstName;
+  mmGH['lastname'] = lastName;
+  mmGH['IP'] = ip;
+  mmGH['txRef'] = 'MC-' +
       DateTime.now().microsecondsSinceEpoch.toString() +
       Random(1995).nextInt(1000).toString();
-  mmRW['orderRef'] = 'MC_' +
+  mmGH['orderRef'] = 'MC_' +
       DateTime.now().microsecondsSinceEpoch.toString() +
       Random(5991).nextInt(1000).toString();
-  mmRW['is_mobile_money_ug'] = 1;
-  mmRW['redirect_url'] = 'https://rave-webhook.herokuapp.com/receivepayment';
-  mmRW['device_fingerprint'] = '69e6b7f0b72037aa8428b70fbe03986c';
+  mmGH['is_mobile_money_ug'] = 1;
+  mmGH['redirect_url'] = 'https://rave-webhook.herokuapp.com/receivepayment';
+  mmGH['device_fingerprint'] = '69e6b7f0b72037aa8428b70fbe03986c';
   return json.encode(mmRW);
 }
 
-/* 
-  * Debit & Credit Card Transactions 
-*/
+// Debit & Credit Card Transactions 
 
 // generic card information
 var vanillaCards = Map();
@@ -149,9 +145,8 @@ var threeDSCards = Map();
 // Nigerian pin based Mastercard/Verve card
 var ngMCVC = Map();
 
-/*
-  * Bank Payments
-*/
+
+// Bank Payments
 
 // Charge us bank account via ACH
 var usBank = Map();

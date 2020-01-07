@@ -16,11 +16,11 @@ See package via [Pub](https://pub.dev/packages/rave)
 
 > Make MobileMoney transactions in  Uganda,  MPESA, Ghana, Zambia, & Rwanda
 
-- [X] Uganda
-- [ ] MPESA
-- [ ] Ghana
-- [ ] Zambia
-- [ ] Rwanda
+- [X] [Uganda](#)
+- [X] [MPESA](#)
+- [X] [Ghana](#)
+- [X] [Zambia](#)
+- [X] [Rwanda](#)
 
 ### Cards
 

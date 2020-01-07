@@ -2,17 +2,25 @@ library rave;
 
 import 'package:rave/utils/data_structures.dart'; // utilities for datastructures
 import 'package:rave/utils/encryption.dart'; // utilities for encryption
-import 'package:rave/utils/make_request.dart'; // utilities for making HTTP requests
+import 'package:rave/utils/make_request.dart';
+
+import 'utils/data_structures.dart'; // utilities for making HTTP requests
 
 /// Used to create a new instance of Rave
 class Rave {
+  /// Your public key provided by flutter wave
+  String pubKey;
 
-  String pubKey; /// Your public key provided by flutter wave
-  String encryptionKey; /// Your encryption key  provided by flutter wave
-  String secretKey; /// Your secret key  provided by flutter wave
+  /// Your encryption generated key provided by flutter wave
+  String encryptionKey;
+
+  /// Your encryption key  provided by flutter wave
+  String secretKey;
+
+  /// Your secret key  provided by flutter wave
 
   /**
-   * To collect money(charge a client) from a Mobile Money subscriber use the method chargeMMUGClient().
+   * To collect money(charge a client) from a Ugandan Mobile Money subscriber use the method chargeMMUGClient().
    * 
    * The chargeMMUGClient() has 6 parameters chargeMMUGClient(amount, email, phoneNumber, firstName, lastName, ip)
    * 
@@ -34,6 +42,122 @@ class Rave {
       String firstName, String lastName, String ip) {
     var payload =
         mmUG(pubKey, amount, email, phoneNumber, firstName, lastName, ip);
+    var encryptedData = encrypt(encryptionKey, payload);
+
+    return chargeMMClientReq(pubKey, encryptedData);
+  }
+
+// MPESA
+  /**
+   * To collect money(charge a client) from an MPESA Mobile Money subscriber use the method chargeMMKEClient().
+   * 
+   * The chargeMMUGClient() has 6 parameters chargeMMUGClient(amount, email, phoneNumber, firstName, lastName, ip)
+   * 
+   * Where;
+   * 
+   * __amount__: is a String specifying the amount of money to collect from a client
+   * 
+   * __email__: is a String specifying the email address of a client
+   * 
+   * __phoneNumber__: is a String specifying the mobile money phone number of the client
+   * 
+   * __firstName__: is a String specifying first name of a client
+   * 
+   * __lastName__ is a String specifying last name of a client
+   * 
+   * __ip__: is a String specifying the IP address of client
+   */
+  String chargeMMKEClient(
+      pubKey, amount, email, phoneNumber, firstName, lastName, ip, narrartion) {
+    var payload = mmMPESA(pubKey, amount, email, phoneNumber, firstName,
+        lastName, ip, narrartion);
+    var encryptedData = encrypt(encryptionKey, payload);
+
+    return chargeMMClientReq(pubKey, encryptedData);
+  }
+
+// Rwanda
+  /**
+   * To collect money (charge a client) from a Rwandese Mobile Money subscriber use the method chargeMMRWClient().
+   * 
+   * The chargeMMUGClient() has 6 parameters chargeMMUGClient(amount, email, phoneNumber, firstName, lastName, ip)
+   * 
+   * Where;
+   * 
+   * __amount__: is a String specifying the amount of money to collect from a client
+   * 
+   * __email__: is a String specifying the email address of a client
+   * 
+   * __phoneNumber__: is a String specifying the mobile money phone number of the client
+   * 
+   * __firstName__: is a String specifying first name of a client
+   * 
+   * __lastName__ is a String specifying last name of a client
+   * 
+   * __ip__: is a String specifying the IP address of client
+   */
+  String chargeMMRWClient(
+      pubKey, amount, email, phoneNumber, firstName, lastName, ip) {
+    var payload =
+        mmRW(pubKey, amount, email, phoneNumber, firstName, lastName, ip);
+    var encryptedData = encrypt(encryptionKey, payload);
+
+    return chargeMMClientReq(pubKey, encryptedData);
+  }
+
+// Zambia
+  /**
+   * To collect money(charge a client) from a Zambian Mobile Money subscriber use the method chargeMMZMClient().
+   * 
+   * The chargeMMUGClient() has 6 parameters chargeMMUGClient(amount, email, phoneNumber, firstName, lastName, ip)
+   * 
+   * Where;
+   * 
+   * __amount__: is a String specifying the amount of money to collect from a client
+   * 
+   * __email__: is a String specifying the email address of a client
+   * 
+   * __phoneNumber__: is a String specifying the mobile money phone number of the client
+   * 
+   * __firstName__: is a String specifying first name of a client
+   * 
+   * __lastName__ is a String specifying last name of a client
+   * 
+   * __ip__: is a String specifying the IP address of client
+   */
+  String chargeMMZMClient(
+      pubKey, amount, email, phoneNumber, firstName, lastName, ip) {
+    var payload =
+        mmZM(pubKey, amount, email, phoneNumber, firstName, lastName, ip);
+    var encryptedData = encrypt(encryptionKey, payload);
+
+    return chargeMMClientReq(pubKey, encryptedData);
+  }
+
+// Ghanna
+  /**
+   * To collect money (charge a client) from a Ghanian Mobile Money subscriber use the method chargeMMGHClient().
+   * 
+   * The chargeMMUGClient() has 6 parameters chargeMMUGClient(amount, email, phoneNumber, firstName, lastName, ip)
+   * 
+   * Where;
+   * 
+   * __amount__: is a String specifying the amount of money to collect from a client
+   * 
+   * __email__: is a String specifying the email address of a client
+   * 
+   * __phoneNumber__: is a String specifying the mobile money phone number of the client
+   * 
+   * __firstName__: is a String specifying first name of a client
+   * 
+   * __lastName__ is a String specifying last name of a client
+   * 
+   * __ip__: is a String specifying the IP address of client
+   */
+  String chargeMMGHClient(
+      pubKey, amount, email, phoneNumber, firstName, lastName, ip) {
+    var payload =
+        mmGH(pubKey, amount, email, phoneNumber, firstName, lastName, ip);
     var encryptedData = encrypt(encryptionKey, payload);
 
     return chargeMMClientReq(pubKey, encryptedData);
